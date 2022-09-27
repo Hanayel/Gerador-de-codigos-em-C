@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+    int main ()
+    {
+        int i, tamanho;
+    
+
+        printf("tamanho do codigo: ");
+        scanf("%d", &tamanho);
+
+        if (tamanho<=0){
+            printf("o codigo deve ser mais de 1 numero");
+            
+            return 1;
+        }
+        
+        char *codigo = malloc (tamanho + 1);
+        
+        char *numeros = "0123456789";
+        int numeros_tam = strlen(numeros);
+        
+        free(codigo);
+        
+        for ( i = 0; i < tamanho; i++)
+        {
+             printf("%d", rand() % 10);
+        }
+       
+    return 0;
+    }
